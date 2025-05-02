@@ -2,6 +2,14 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface Player {
+  age: string;
+  team_ids: any;
+  birth_date: any;
+  height: string;
+  first_name: string;
+  national_team: string;
+  last_name: string;
+  position: string;
   id: string;
   name: string;
 }

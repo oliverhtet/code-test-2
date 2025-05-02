@@ -18,7 +18,7 @@ interface Player {
 }
 
 const PlayerList: React.FC = () => {
-  const players = useSelector((state: RootState) => state.players.players) as Player[];
+  const players = useSelector((state: RootState) => state.players.players);
 
   return (
     <div style={{ overflowX: 'auto' }}>
@@ -48,7 +48,7 @@ const PlayerList: React.FC = () => {
                 <td style={{ padding: '12px' }}>{player.position || 'N/A'}</td>
                 <td style={{ padding: '12px' }}>{player.national_team || 'N/A'}</td>
                 <td style={{ padding: '12px' }}>{player.height || 'N/A'}</td>
-                <td style={{ padding: '12px' }}>{player.weight || 'N/A'}</td>
+                <td style={{ padding: '12px' }}>{player.height || 'N/A'}</td>
                 <td style={{ padding: '12px' }}>
                   {player.birth_date ? new Date(player.birth_date).toLocaleDateString() : 'N/A'}
                 </td>

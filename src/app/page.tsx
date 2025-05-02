@@ -9,7 +9,7 @@ import { RootState } from '@/store/store';
 
 const HomePage = () => {
   const router = useRouter();
-  const { user } = useSelector((state: RootState) => state.auth);
+  const  user = useSelector((state: RootState) => state.auth);
 
   useEffect(() => {
     if (user) {
@@ -17,7 +17,7 @@ const HomePage = () => {
     } else {
       router.push('/login');
     }
-  }, [user]);
+  }, [user,router]);
 
   return null; // We don't render anything on this page
 };
